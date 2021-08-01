@@ -1,0 +1,490 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8C821030-4602-4352-A9E5-573D650FAD2A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DesktopApp3</RootNamespace>
+    <AssemblyName>DesktopApp3</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu.Core, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9" />
+    <Reference Include="Bunifu.UI.WinForm.BunifuShadowPanel">
+      <HintPath>..\..\panels\Bunifu.UI.WinForm.BunifuShadowPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton">
+      <HintPath>..\..\panels\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCheckBox">
+      <HintPath>..\..\panels\Bunifu.UI.WinForms.BunifuCheckBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCircleProgress">
+      <HintPath>..\..\panels\Bunifu.UI.WinForms.BunifuCircleProgress.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDatePicker">
+      <HintPath>..\..\panels\Bunifu.UI.WinForms.BunifuDatePicker.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDropdown">
+      <HintPath>..\..\panels\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuLabel">
+      <HintPath>..\..\panels\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPictureBox">
+      <HintPath>..\..\panels\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuRadioButton">
+      <HintPath>..\..\panels\Bunifu.UI.WinForms.BunifuRadioButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
+      <HintPath>..\..\panels\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\panels\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\..\Downloads\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Add_Course.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Add_Course.Designer.cs">
+      <DependentUpon>Add_Course.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add_C_info.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Add_C_info.Designer.cs">
+      <DependentUpon>Add_C_info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminactions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="adminactions.Designer.cs">
+      <DependentUpon>adminactions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="attendance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="attendance.Designer.cs">
+      <DependentUpon>attendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="course.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="course_Data.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="course_Data.Designer.cs">
+      <DependentUpon>course_Data.cs</DependentUpon>
+    </Compile>
+    <Compile Include="db_Attendance.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="person.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Search.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Search.Designer.cs">
+      <DependentUpon>Search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Show_Students.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Show_Students.Designer.cs">
+      <DependentUpon>Show_Students.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Show_Student_of_Course.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Show_Student_of_Course.Designer.cs">
+      <DependentUpon>Show_Student_of_Course.cs</DependentUpon>
+    </Compile>
+    <Compile Include="student_action.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="student_action.Designer.cs">
+      <DependentUpon>student_action.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Profile.Designer.cs">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Show_Teachers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Show_Teachers.Designer.cs">
+      <DependentUpon>Show_Teachers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="student_course.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Teaacher_course.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher_Actions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Teacher_Actions.Designer.cs">
+      <DependentUpon>Teacher_Actions.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Add_Course.resx">
+      <DependentUpon>Add_Course.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add_C_info.resx">
+      <DependentUpon>Add_C_info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminactions.resx">
+      <DependentUpon>adminactions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="attendance.resx">
+      <DependentUpon>attendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="course_Data.resx">
+      <DependentUpon>course_Data.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Search.resx">
+      <DependentUpon>Search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Show_Students.resx">
+      <DependentUpon>Show_Students.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Show_Student_of_Course.resx">
+      <DependentUpon>Show_Student_of_Course.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="student_action.resx">
+      <DependentUpon>student_action.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profile.resx">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Show_Teachers.resx">
+      <DependentUpon>Show_Teachers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teacher_Actions.resx">
+      <DependentUpon>Teacher_Actions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_user_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_80pxw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pass1_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giphy %281%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\676bf0e9f3c16649cd7f426c6dcd755a-flat-user-sign-with-round-background-by-vexels.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_forgot_password_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_user_641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pass2_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_autograph_1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_student_male.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_phone_filled.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_lifecycle_1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_address_1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_address1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_autograph1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_gender_11.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_lifecycle1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_phone_filled_11.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_student_male_11.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_profile_face.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_change.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_change_1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_change_2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_user_male_circle_filled.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_courses.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_change_21.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_logout_rounded_left_filled.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_edit_1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_trash_1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_empty_trash_filled.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_empty_trash_filled_1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_edit_2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_delete_trash.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_visible_filled.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_edit_user_male.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_invisible_filled.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_edit_user.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_delete_1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_delete_2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_visible_filled1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_edit_user_male1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_student_registration_1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_courses_1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_search.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_edit_user_male2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_student_registration_3.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_courses_2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_visible_filled2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_visible_filled3.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_visible_filled4.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_courses_4.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_groups_filled.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_training.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_attendance_mark_filled.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_training_filled.ico" />
+    <None Include="Resources\icons8_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
